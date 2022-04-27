@@ -14,9 +14,9 @@ class Song(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = relationship("User", back_populates="songs", uselist=False)
 
-    def __init__(self, title, artist):
+    def __init__(self, title):
         self.title = title
-        self.artist = artist
+
 
 class Location(db.Model):
     __tablename__ = 'locations'

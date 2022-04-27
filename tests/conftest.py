@@ -21,10 +21,12 @@ def application():
     )
     with application.app_context():
         db.create_all()
+        #creates tables
         yield application
         db.session.remove()
-        #drops the database tables after the test runs
+        #removes tables when test is over, drops the database tables after the test runs
         db.drop_all()
+
 
 @pytest.fixture()
 def add_user(application):
