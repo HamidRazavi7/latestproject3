@@ -39,7 +39,9 @@ def create_app():
     login_manager.login_view = "auth.login"
     # Needed for CSRF protection of form submissions and WTF Forms
     # https://wtforms.readthedocs.io/en/3.0.x/
-    csrf = CSRFProtect(app)
+    #csrf = CSRFProtect(app)
+    app.config['WTF_CSRF_ENABLED'] = False
+    csrf = True
     # https://bootstrap-flask.readthedocs.io/en/stable/
     bootstrap = Bootstrap5(app)
     # these load functions with web interface
