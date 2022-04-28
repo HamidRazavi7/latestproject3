@@ -9,9 +9,8 @@ from app.logging_config.log_formatters import RequestFormatter
 log_con = flask.Blueprint('log_con', __name__)
 
 
-#@log_con.before_app_request
-#def before_request_logging():
-
+# @log_con.before_app_request
+# def before_request_logging():
 
 
 @log_con.after_app_request
@@ -40,7 +39,7 @@ LOGGING_CONFIG = {
         'RequestFormatter': {
             '()': 'app.logging_config.log_formatters.RequestFormatter',
             'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
-                        '%(levelname)s in %(module)s: %(message)s'
+                      '%(levelname)s in %(module)s: %(message)s'
         }
     },
     'handlers': {
@@ -95,12 +94,12 @@ LOGGING_CONFIG = {
     },
     'loggers': {
         '': {  # root logger
-            'handlers': ['default','file.handler'],
+            'handlers': ['default', 'file.handler'],
             'level': 'DEBUG',
             'propagate': True
         },
         '__main__': {  # if __name__ == '__main__'
-            'handlers': ['default','file.handler'],
+            'handlers': ['default', 'file.handler'],
             'level': 'DEBUG',
             'propagate': True
         },
