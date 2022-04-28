@@ -2,6 +2,7 @@ import os
 
 
 class Config(object):
+
     DEBUG = False
     TESTING = False
     SECRET_KEY = 'This is an INSECURE secret!! DO NOT use this in production!!'
