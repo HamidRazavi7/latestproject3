@@ -21,13 +21,14 @@ from app.songs import songs
 from app.map import map
 from app.db import database
 from flask_cors import CORS
+
 login_manager = flask_login.LoginManager()
 
 
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    if  os.environ.get("FLASK_ENV") == "production":
+    if os.environ.get("FLASK_ENV") == "production":
         app.config.from_object("app.config.ProductionConfig")
     elif os.environ.get("FLASK_ENV") == "development":
         app.config.from_object("app.config.DevelopmentConfig")
@@ -39,7 +40,7 @@ def create_app():
     login_manager.login_view = "auth.login"
     # Needed for CSRF protection of form submissions and WTF Forms
     # https://wtforms.readthedocs.io/en/3.0.x/
-    ##csrf = CSRFProtect(app)
+    # csrf = CSRFProtect(app)
     app.config['WTF_CSRF_ENABLED'] = False
     csrf = True
     # https://bootstrap-flask.readthedocs.io/en/stable/
@@ -58,7 +59,7 @@ def create_app():
     app.cli.add_command(create_database)
     db.init_app(app)
     api_v1_cors_config = {
-    "methods": ["OPTIONS", "GET", "POST"],
+        "methods": ["OPTIONS", "GET", "POST"],
     }
     CORS(app, resources={"/api/*": api_v1_cors_config})
     # Run once at startup:

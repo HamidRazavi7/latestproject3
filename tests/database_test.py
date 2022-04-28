@@ -5,4 +5,4 @@ def test_upload_csvfile(client):
     # I should copy the logging code here once login test works.
     res = client.get("/login")
     assert res.status_code == 200
-    response = client.post('/songs/upload', data=data)
+    # response = client.post('/songs/upload', data=data)
