@@ -1,0 +1,52 @@
+2022-04-27 09:32:43,957 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 09:33:33,472 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 09:36:04,123 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 09:36:25,195 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 10:01:50,947 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 10:33:07,334 [INFO] myApp: None
+2022-04-27 10:33:59,251 [INFO] myApp: None
+2022-04-27 10:34:35,402 [INFO] myApp: None
+2022-04-27 10:35:10,568 [INFO] myApp: None
+2022-04-27 10:38:15,132 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 10:41:39,827 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 10:42:57,693 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 10:59:12,091 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 11:23:38,629 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 11:30:52,266 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 12:03:53,432 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 12:50:07,438 [INFO] myApp: PWD: /home/myuser
+2022-04-27 12:58:08,114 [INFO] myApp: PWD: /home/myuser
+2022-04-27 13:20:31,866 [INFO] myApp: PWD: /home/myuser
+2022-04-27 13:20:31,876 [INFO] myApp: <User 'chris@gmail.com'>
+2022-04-27 13:26:04,691 [INFO] myApp: PWD: /home/myuser
+2022-04-27 13:26:04,702 [INFO] myApp: <User 'chris@gmail.com'>
+2022-04-27 13:36:43,689 [INFO] myApp: PWD: /home/myuser
+2022-04-27 13:36:43,740 [INFO] myApp: <User 'chris@gmail.com'>
+2022-04-27 13:40:40,034 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 13:41:53,835 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 13:55:17,930 [INFO] myApp: PWD: /home/myuser
+2022-04-27 13:55:17,981 [INFO] myApp: <User 'chris@gmail.com'>
+2022-04-27 14:22:10,264 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:22:34,492 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:23:01,768 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:24:42,864 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:27:18,946 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:28:01,934 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:28:58,306 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 14:37:26,862 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-27 16:10:01,360 [INFO] myApp: PWD: /home/myuser
+2022-04-27 16:10:01,424 [INFO] myApp: <User 'test@gmail.com'>
+2022-04-28 03:51:47,866 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 05:46:15,647 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 05:52:35,351 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 06:22:31,601 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 06:47:25,636 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 07:07:00,617 [INFO] myApp: PWD: /home/myuser
+2022-04-28 07:07:00,653 [INFO] myApp: <User 'test@gmail.com'>
+2022-04-28 07:10:32,251 [INFO] myApp: PWD: /home/myuser
+2022-04-28 07:10:32,330 [INFO] myApp: <User 'test@gmail.com'>
+2022-04-28 07:16:55,296 [INFO] myApp: PWD: /home/myuser
+2022-04-28 07:16:55,358 [INFO] myApp: <User 'test@gmail.com'>
+2022-04-28 07:35:56,476 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 07:36:16,337 [INFO] myApp: <User 'keith@webizly.com'>
+2022-04-28 07:36:55,014 [INFO] myApp: <User 'keith@webizly.com'>
