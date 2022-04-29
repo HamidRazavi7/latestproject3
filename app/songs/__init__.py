@@ -47,7 +47,7 @@ def songs_upload():
         current_user.songs = list_of_songs
         db.session.commit()
 
-        print('within redirect')
+        log.info('test')
         return redirect(url_for('songs.songs_browse'))
 
     try:
