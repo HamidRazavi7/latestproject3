@@ -123,6 +123,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
+        'file.handler.logout': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': 'app/logs/logout.log',
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
     },
     'loggers': {
         '': {  # root logger
@@ -147,6 +154,11 @@ LOGGING_CONFIG = {
         },
         'csvupload': {
             'handlers': ['file.handler.csvupload'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'logout': {
+            'handlers': ['file.handler.logout'],
             'level': 'DEBUG',
             'propagate': False
         },

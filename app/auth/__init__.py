@@ -63,10 +63,12 @@ def login():
 def logout():
     """Logout the current user."""
     user = current_user
+    log = logging.getLogger('logout')
     user.authenticated = False
     db.session.add(user)
     db.session.commit()
     logout_user()
+    log.info('You Are Logged out')
     return redirect(url_for('auth.login'))
 
 
