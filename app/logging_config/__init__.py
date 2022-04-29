@@ -67,10 +67,10 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.myapp': {
+        'file.handler.csvupload': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': 'app/logs/myapp.log',
+            'filename': 'app/logs/csvupload.log',
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -145,8 +145,8 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-        'myApp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.myapp'],
+        'csvupload': {
+            'handlers': ['file.handler.csvupload'],
             'level': 'DEBUG',
             'propagate': False
         },

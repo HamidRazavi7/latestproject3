@@ -32,7 +32,7 @@ def songs_browse(page):
 @login_required
 def songs_upload():
     form = csv_upload()
-    log = logging.getLogger("myApp")
+    log = logging.getLogger("csvupload")
     if form.validate_on_submit():
         filename = secure_filename(form.file.data.filename)
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
@@ -47,7 +47,7 @@ def songs_upload():
         current_user.songs = list_of_songs
         db.session.commit()
 
-        log.info('test')
+        log.info('Music CSV Was Uploaded')
         return redirect(url_for('songs.songs_browse'))
 
     try:
