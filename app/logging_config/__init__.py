@@ -1,19 +1,19 @@
 import logging
+import os
 from logging.config import dictConfig
 
 import flask
 from flask import request, current_app
 
-from app.logging_config.log_formatters import RequestFormatter
+#from app.logging_config.log_formatters import RequestFormatter
+from app import config
 
 log_con = flask.Blueprint('log_con', __name__)
 
 
-@log_con.before_app_request
-def before_request_logging():
-    current_app.logger.info("Before Request")
-    log = logging.getLogger("debug")
-    log.info("Debug Log")
+#@log_con.before_app_request
+#def before_request_logging():
+
 
 
 @log_con.after_app_request
@@ -24,20 +24,17 @@ def after_request_logging(response):
         return response
     elif request.path.startswith('/bootstrap'):
         return response
-    current_app.logger.info("After Request")
-
-    log = logging.getLogger("debug")
-    log.info("Debug Log")
     return response
 
-
 @log_con.before_app_first_request
-def configure_logging():
+def setup_logs():
+
+    # set the name of the apps log folder to logs
+    logdir = config.Config.LOG_DIR
+    # make a directory if it doesn't exist
+    if not os.path.exists(logdir):
+        os.mkdir(logdir)
     logging.config.dictConfig(LOGGING_CONFIG)
-    log = logging.getLogger("debug")
-    log.info("Debug Log")
-    log = logging.getLogger("mydebug")
-    log.info("debug run")
 
 
 LOGGING_CONFIG = {
@@ -76,21 +73,21 @@ LOGGING_CONFIG = {
         },
         'file.handler.registration': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
+            'formatter': 'standard',
             'filename': 'app/logs/registration.log',
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.login': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
+            'formatter': 'standard',
             'filename': 'app/logs/login.log',
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.request': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
+            'formatter': 'standard',
             'filename': 'app/logs/request.log',
             'maxBytes': 10000000,
             'backupCount': 5,
@@ -152,22 +149,22 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-        'csvupload': {
+        'csvupload': {  # if __name__ == '__main__'
             'handlers': ['file.handler.csvupload'],
             'level': 'DEBUG',
             'propagate': False
         },
-        'logout': {
+        'logout': {  # if __name__ == '__main__'
             'handlers': ['file.handler.logout'],
             'level': 'DEBUG',
             'propagate': False
         },
-        'registration': {
+        'registration': {  # if __name__ == '__main__'
             'handlers': ['file.handler.registration'],
             'level': 'DEBUG',
             'propagate': False
         },
-        'login': {
+        'login': {  # if __name__ == '__main__'
             'handlers': ['file.handler.login'],
             'level': 'DEBUG',
             'propagate': False
