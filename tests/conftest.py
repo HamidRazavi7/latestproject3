@@ -17,7 +17,7 @@ def application():
     # you need this one if you want to see whats in the database
     # os.environ['FLASK_ENV'] = 'development'
     # you need to run it in testing to pass on github
-    os.environ['FLASK_ENV'] = 'testing'
+    # os.environ['FLASK_ENV'] = 'testing'
 
     application = create_app()
 
