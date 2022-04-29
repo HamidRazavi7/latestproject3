@@ -81,6 +81,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
+        'file.handler.login': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'RequestFormatter',
+            'filename': 'app/logs/login.log',
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
         'file.handler.request': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'RequestFormatter',
@@ -148,8 +155,11 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-
-        'logging'
+        'login': {
+            'handlers': ['file.handler.login'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
         'debug': {  # if __name__ == '__main__'
             'handlers': ['file.handler.debug'],
             'level': 'DEBUG',

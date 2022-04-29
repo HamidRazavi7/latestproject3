@@ -54,7 +54,7 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
-            log.info('')
+            log.info('You Are Logged In')
             return redirect(url_for('auth.dashboard'))
     return render_template('login.html', form=form)
 
